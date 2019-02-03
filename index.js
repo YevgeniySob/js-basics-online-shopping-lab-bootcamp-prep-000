@@ -51,9 +51,6 @@ function total() {
 }
 
 function removeFromCart(item) {
-  if (cart.hasOwnProperty(item) === false) {
-    return "That item is not in your cart.";
-  }
   var i = 0
   var size = cart.length;
   for(;i < size; i++){
@@ -62,7 +59,7 @@ function removeFromCart(item) {
       return cart
     }
   }
-  return cart
+  return "That item is not in your cart."
 }
 
 function placeOrder(cardNumber) {
